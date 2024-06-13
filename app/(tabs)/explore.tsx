@@ -1,10 +1,10 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { StyleSheet, Image, View } from 'react-native';
+import { Link, Stack } from 'expo-router';
+import { StyleSheet, Image, View, Pressable, Linking } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import {A} from"@expo/html-elements";
-
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
@@ -18,45 +18,45 @@ export default function TabTwoScreen() {
       </ThemedView>
 
       <ThemedView style={styles.contentContainer}>
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/1.png')} style={styles.icon} />
-          <A style={styles.text} href='https://wa.me/qr/OED2TZ7BSEZUD1'>Whatsapp</A>
-        </ThemedView>
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://wa.me/qr/OED2TZ7BSEZUD1")}}>
+        <Image source={require('@/assets/images/1.png')} style={styles.icon} />
+        <A style={styles.text} href='https://wa.me/qr/OED2TZ7BSEZUD1'>Whatsapp</A>
+        </Pressable>
 
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/7.png')} style={styles.icon} />
-          <A style={styles.text} href='https://www.linkedin.com/in/murillo-ben%C3%ADcio-ab5323312/'>Linkedin</A>
-        </ThemedView>
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://www.linkedin.com/in/murillo-ben%C3%ADcio-ab5323312/")}}>
+        <Image source={require('@/assets/images/7.png')} style={styles.icon} />
+        <A style={styles.text} href='https://www.linkedin.com/in/murillo-ben%C3%ADcio-ab5323312/'>Linkedin</A>
+        </Pressable>
 
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/8.png')} style={styles.icon} />
-          <A style={styles.text} href='mailto:mubenicio.lima.21@gmail.com'>Email</A>
-        </ThemedView>
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("mailto:mubenicio.lima.21@gmail.com")}}>
+        <Image source={require('@/assets/images/8.png')} style={styles.icon} />
+        <A style={styles.text} href='mailto:mubenicio.lima.21@gmail.com'>Email</A>
+        </Pressable>
 
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/2.png')} style={styles.icon} />
-          <A style={styles.text} href='https://github.com/murillobenicio'>Github</A>
-        </ThemedView>
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://github.com/murillobenicio")}}>
+        <Image source={require('@/assets/images/2.png')} style={styles.icon} />
+        <A style={styles.text} href='https://github.com/murillobenicio'>Github</A>
+        </Pressable>
 
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/3.png')} style={styles.icon} />
-          <A style={styles.text} href='https://br.pinterest.com/mubeniciolima21/'>Pinterest</A>
-        </ThemedView>
+      <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://br.pinterest.com/mubeniciolima21")}}>
+        <Image source={require('@/assets/images/3.png')} style={styles.icon} />
+        <A style={styles.text} href='https://br.pinterest.com/mubeniciolima21/'>Pinterest</A>
+        </Pressable>
+          
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("tel:5518981593228")}}>
+        <Image source={require('@/assets/images/4.png')} style={styles.icon} />
+        <A style={styles.text} href='tel:5518981593228'>Telefone</A>
+        </Pressable>
+        
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://www.instagram.com/munizzssx/")}}>
+        <Image source={require('@/assets/images/5.png')} style={styles.icon} />
+        <A style={styles.text} href='https://www.instagram.com/munizzssx/'>Instagram</A>
+        </Pressable>
 
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/4.png')} style={styles.icon} />
-          <A style={styles.text} href='tel:5518981593228'>Telefone</A>
-        </ThemedView>
-
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/5.png')} style={styles.icon} />
-          <A style={styles.text} href='https://www.instagram.com/munizzssx/'>Instagram</A>
-        </ThemedView>
-
-        <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/6.png')} style={styles.icon} />
-          <A style={styles.text} href='https://x.com/Murillo98558276'>Twiter/X</A>
-        </ThemedView>
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://x.com/Murillo98558276")}}>
+        <Image source={require('@/assets/images/6.png')} style={styles.icon} />
+        <A style={styles.text} href='https://x.com/Murillo98558276'>Twiter/X</A>
+        </Pressable>
 
 
 
@@ -81,10 +81,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign:'center',
     marginTop: 16,
     backgroundColor: 'white',
     borderRadius: 100,
-    padding: 10
+    padding: 10,
+    width: 300,
   },
   icon: {
     width: 40,
@@ -93,6 +95,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
+    color:'black'
     
   },
 });
