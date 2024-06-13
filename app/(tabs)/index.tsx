@@ -32,8 +32,9 @@ export default function HomeScreen() {
       <ThemedView style={styles.tituloContainer}>
         <ThemedText type="subtitle">Sobre mim:</ThemedText>
       </ThemedView>
+      <Image source={require('@/assets/images/eu.jpeg')} style={styles.icon} />
       <ThemedView style={styles.textoContainer}>
-        <ThemedText>
+        <ThemedText type="defaultSemiBold">
           Sou Murillo Benício, aluno da ETEC Miltton Gazzetti de Presidente Vensceslau.
           Professor: Graziani Zanfolin.
           Meu número de telefone é: 18 98159-3228
@@ -43,7 +44,7 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">Próxima página:</ThemedText>
         </ThemedView>
         <ThemedView style={styles.textoContainer}>
-        <ThemedText>
+        <ThemedText type="defaultSemiBold">
           Lá estara todas as redes sociais na qual o interessado pode entrar em contato.
         </ThemedText>
       </ThemedView>
@@ -69,4 +70,12 @@ const styles = StyleSheet.create({
     left: -30,
     position: 'absolute',
   },
+  icon:{
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:100,
+    height:150,
+    width:110,
+    alignSelf:'center',
+  }
 });
