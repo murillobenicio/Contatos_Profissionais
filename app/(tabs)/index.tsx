@@ -16,7 +16,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.tituloContainer}>
-        <ThemedText type="title">Bem vindo ao          Egg Social!</ThemedText>
+        <ThemedText type="title">Bem-vindo ao          Egg Social!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.tituloContainer}>
@@ -24,7 +24,7 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.textoContainer}>
         <ThemedText>
-          <ThemedText type="defaultSemiBold">O app Egg Social é um aplicativo com o objetivo de simplificar o acesso as redes sociais do dev
+          <ThemedText type="defaultSemiBold">O aplicativo Egg Social tem como objetivo simplificar o acesso as redes sociais do dev
             criador deste aplicativo.
           </ThemedText>
         </ThemedText>

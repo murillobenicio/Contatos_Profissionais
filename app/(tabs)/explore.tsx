@@ -18,9 +18,9 @@ export default function TabTwoScreen() {
       </ThemedView>
 
       <ThemedView style={styles.contentContainer}>
-        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://wa.me/qr/OED2TZ7BSEZUD1")}}>
+        <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://wa.me/5518981593228")}}>
         <Image source={require('@/assets/images/1.png')} style={styles.icon} />
-        <A style={styles.text} href='https://wa.me/qr/OED2TZ7BSEZUD1'>Whatsapp</A>
+        <A style={styles.text} href='https://wa.me/5518981593228'>Whatsapp</A>
         </Pressable>
 
         <Pressable style={styles.redes} onPress={() => {Linking.openURL("https://www.linkedin.com/in/murillo-ben%C3%ADcio-ab5323312/")}}>
